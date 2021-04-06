@@ -1,5 +1,5 @@
 import {Pokemon} from "./Classe/Pokemon";
 
-const p = new Pokemon("Carapute");
-const a = new Pokemon("Salamerde");
+const p = new Pokemon("Carapuce");
+const a = new Pokemon("Salameche");
 console.log(p.name +" vs "+ a.name);
