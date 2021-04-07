@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node main.js",
-    "build": "tsc main.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node Pokemon.ts",
+    "build": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/MathiasRime/projetTS/issues"
   },
-  "homepage": "https://github.com/MathiasRime/projetTS#readme"
+  "homepage": "https://github.com/MathiasRime/projetTS#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.22",
+    "babel-jest": "^26.6.3"
+  }
 }
