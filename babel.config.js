@@ -4,3 +4,13 @@ module.exports = {
             '@babel/preset-typescript',
     ],
 };
+
+
+
+if (typeof ED === "undefined") {
+    ED = {
+        __namespace: true
+    };
+}
+
+
