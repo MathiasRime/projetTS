@@ -1,2 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var Attack_1 = require("./Classe/Attack");
+var Pokemon_1 = require("./Classe/Pokemon");
+var Fight_1 = require("./Classe/Fight");
+var Morsure = new Attack_1.Attack("Morsure", 10, 25, 50);
+var Charge = new Attack_1.Attack("Charge", 20, 35, 70);
+var Carapuce = new Pokemon_1.Pokemon("Carapuce", 100, [Morsure], 100);
+var Salameche = new Pokemon_1.Pokemon("Salameche", 120, [Charge], 100);
+var combat = new Fight_1.Fight(Carapuce, Salameche);
+combat.battle();

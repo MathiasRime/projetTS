@@ -55,27 +55,25 @@ export class Fight{
 
     }
 
-   async battle() :Promise<string>{
+   async battle() :Promise<any>{
         let winner =  this.getWinner(this.pokemonA,this.pokemonB);
         while(winner === null){
-
-           await this.round();
+            this.round();
            winner =  this.getWinner(this.pokemonA,this.pokemonB);
-
         }
-        return winner;
-        console.log(winner);
+
+
     }
 
     round(){
-        setTimeout(() =>{
 
             let pokemonOrder :Pokemon[] = this.isAttackingFirst();
 
             pokemonOrder[0].AttackEnemy(pokemonOrder[0].getAttack()[0],pokemonOrder[1]);
             pokemonOrder[1].AttackEnemy(pokemonOrder[1].getAttack()[0],pokemonOrder[0]);
-        },300);
+            console.log("hello");
 
     }
+
 
 }

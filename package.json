@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node Pokemon.ts",
+    "start": "node main.ts",
     "build": "tsc",
+
     "test": "jest"
   },
   "repository": {
