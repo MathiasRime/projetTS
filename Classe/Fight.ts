@@ -55,12 +55,14 @@ export class Fight{
 
     }
 
-   async battle() :Promise<any>{
+   async battle(){
         let winner =  this.getWinner(this.pokemonA,this.pokemonB);
         while(winner === null){
             this.round();
            winner =  this.getWinner(this.pokemonA,this.pokemonB);
         }
+
+        return winner;
 
 
     }
@@ -71,7 +73,7 @@ export class Fight{
 
             pokemonOrder[0].AttackEnemy(pokemonOrder[0].getAttack()[0],pokemonOrder[1]);
             pokemonOrder[1].AttackEnemy(pokemonOrder[1].getAttack()[0],pokemonOrder[0]);
-            console.log("hello");
+
 
     }
 

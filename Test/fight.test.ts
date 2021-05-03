@@ -1,7 +1,7 @@
 import {Pokemon} from "../Classe/Pokemon";
 import {Attack} from "../Classe/Attack";
 import {Fight} from "../Classe/Fight";
-import inquirer from 'inquirer';
+import fetchData from 'jest'
 
 
 
@@ -69,20 +69,27 @@ describe("round",() => {
 
 });
 
-describe("battle",() => {
-    it("it should return Carapuce",()=>{
+describe("battle test",() => {
+    it("it should return nul",()=>{
 
         const charge = new Attack("Morsure",10,35,70);
-        const Morsure = new Attack("Morsure",50,35,70);
-        const pokemonA = new Pokemon("Carapuce",123,[Morsure],100);
+        const pokemonA = new Pokemon("Carapuce",123,[charge],100);
         const pokemonB = new Pokemon("Salameche",123,[charge],100);
         const fight = new Fight(pokemonA,pokemonB);
 
 
-
-        expect(fight.battle()).toBe("Carapuce");
+        expect(fight.battle()).toBe("match null");
     });
 
-});
+    it("it should return Salameche",()=>{
+        const Morsure = new Attack("Morsure",15,35,70);
+        const charge = new Attack("Charge",10,35,70);
+        const pokemonA = new Pokemon("Carapuce",123,[charge],100);
+        const pokemonB = new Pokemon("Salameche",123,[Morsure],100);
+        const fight = new Fight(pokemonA,pokemonB);
 
+
+        expect(fight.battle()).toBe("Salameche");
+    });
+});
 
